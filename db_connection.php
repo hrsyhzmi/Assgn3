@@ -1,0 +1,13 @@
+<?php
+$host = 'sql303.infinityfree.com';
+$dbname = 'if0_38070204_as3';
+$username = 'if0_38070204';
+$password = 'Ye65Y0FtgUxFh';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+}
+?>

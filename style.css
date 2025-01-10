@@ -1,0 +1,966 @@
+.index-page body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: #f0f8ff;
+}
+
+.index-page header {
+    text-align: center;
+    background-color: #654189;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.index-page header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.index-page header h2 {
+    margin: 10px 0 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+}
+
+.index-page main {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #fafafa;
+    padding: 20px;
+}
+
+.index-page .button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Restrict width for better alignment */
+    margin: auto; /* Center the container */
+}
+
+.index-page .btn {
+    display: block;
+    margin: 20px 0; /* Add spacing between buttons */
+    padding: 20px 40px; /* Larger padding for bigger buttons */
+    font-size: 1.5rem; /* Larger text size */
+    color: white;
+    background-color: #40096c;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Make buttons fit the container */
+    max-width: 300px; /* Restrict maximum button width */
+    text-align: center; /* Center text */
+}
+
+.index-page .btn:hover {
+    background-color: #8e69c1;
+    transform: scale(1.05); /* Add a subtle hover effect */
+}
+
+.index-page footer {
+    text-align: center;
+    background-color: #654189;
+    color: white;
+    padding: 15px 0; /* Slightly larger padding for better touch accessibility */
+    font-size: 1rem; /* Ensure font size is readable on mobile devices */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fix the footer to the bottom of the screen */
+    bottom: 0; /* Ensure it stays at the very bottom */
+    width: 100%; /* Span the entire width of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 600px) {
+    .index-page header h1 {
+        font-size: 2rem; /* Smaller font for mobile */
+    }
+
+    .index-page header h2 {
+        font-size: 1.2rem; /* Adjust subtitle size */
+    }
+
+    .index-page .button-container {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .index-page .btn {
+        font-size: 1rem; /* Adjust button text size */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    .index-page footer {
+        font-size: 0.9rem; /* Slightly smaller text for footer */
+        padding: 10px 0;
+    }
+
+/* General styling for the register page */
+body.register-page {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it occupies the full height of the viewport */
+    box-sizing: border-box; /* Include padding and border in dimensions */
+}
+
+.register-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 10px; /* Add some margin for better spacing on mobile */
+    box-sizing: border-box;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem; /* Ensure header text is readable on mobile */
+}
+
+.register-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 0.95rem; /* Ensure labels are legible on smaller screens */
+}
+
+.register-container input {
+    width: 100%;
+    padding: 12px; /* Slightly larger padding for touch accessibility */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem; /* Increase font size for better readability */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.register-container button {
+    background-color: #40096c;
+    color: #fff;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%; /* Ensure button spans full width on smaller screens */
+    box-sizing: border-box; /* Ensure padding is accounted for */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-container button:hover {
+    background-color: #654189;
+    transform: scale(1.02); /* Add a subtle hover effect */
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem; /* Adjust font size for error messages */
+    text-align: left;
+    margin-bottom: 10px; /* Add spacing below error messages */
+}
+
+/* Link to login page */
+.register-container .login-link {
+    margin-top: 15px;
+    font-size: 0.9rem; /* Adjust text size for mobile */
+}
+
+.register-container .login-link a {
+    color: #40096c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-container .login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 600px) {
+    .register-container {
+        padding: 15px; /* Adjust padding for smaller devices */
+        border-radius: 6px;
+    }
+
+    .register-container h2 {
+        font-size: 1.5rem; /* Adjust header size for compact view */
+    }
+
+    .register-container input {
+        font-size: 0.95rem; /* Slightly smaller input text */
+        padding: 10px; /* Compact padding for smaller screens */
+    }
+
+    .register-container button {
+        font-size: 0.95rem; /* Adjust button text size */
+        padding: 10px 12px; /* Adjust button padding */
+    }
+
+    .register-container label {
+        font-size: 0.85rem; /* Adjust label size */
+    }
+
+    .error {
+        font-size: 0.8rem; /* Adjust error message size */
+    }
+
+    .register-container .login-link {
+        font-size: 0.85rem; /* Adjust text size for login link */
+    }
+}
+
+
+/* General Login Page Styling */
+body.login-page {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px; /* Add padding to avoid content touching screen edges */
+    box-sizing: border-box; /* Include padding and border in dimensions */
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto; /* Center the container on mobile screens */
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem; /* Ensure header is readable on small screens */
+}
+
+.login-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 0.95rem; /* Adjust label size for readability on small screens */
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px; /* Larger padding for touch accessibility */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem; /* Increase font size for better readability */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.login-container .error {
+    color: red;
+    font-size: 0.9rem; /* Adjust error message size for small screens */
+    text-align: left;
+    margin-top: -5px; /* Reduce top margin for compact spacing */
+    margin-bottom: 10px;
+}
+
+.login-container button {
+    width: 100%;
+    background-color: #40096c;
+    color: #fff;
+    border: none;
+    padding: 12px; /* Larger padding for touch-friendly design */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Increase button text size */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-container button:hover {
+    background-color: #654189;
+    transform: scale(1.02); /* Subtle hover effect */
+}
+
+.register-link {
+    margin-top: 15px; /* Add spacing above the link */
+    text-align: center;
+    font-size: 0.9rem; /* Adjust link size for smaller screens */
+}
+
+.register-link a {
+    color: #6343b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design Adjustments for Smaller Screens */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 15px; /* Reduce padding for smaller screens */
+        border-radius: 8px; /* Adjust border radius */
+    }
+
+    .login-container h2 {
+        font-size: 1.6rem; /* Adjust header size for compact view */
+    }
+
+    .login-container input {
+        font-size: 0.9rem; /* Slightly smaller input text size */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .login-container button {
+        font-size: 0.95rem; /* Adjust button text size */
+        padding: 10px 12px; /* Adjust button padding */
+    }
+
+    .login-container label {
+        font-size: 0.85rem; /* Adjust label text size */
+    }
+
+    .login-container .error {
+        font-size: 0.85rem; /* Adjust error message size */
+    }
+
+    .register-link {
+        font-size: 0.85rem; /* Adjust link size for mobile */
+    }
+}
+
+
+
+
+/* General Styling for Forgot and Reset Pages */
+.forgot-page, .reset-page {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.forgot-container, .reset-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* General Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #40096c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px; /* Same gap between all buttons */
+}
+
+/* 'Back to Login' button styling */
+button.btn-secondary {
+    width: 100%; /* Ensure it takes full width like the other buttons */
+    margin-bottom: 15px; /* Ensure same margin at the bottom */
+  
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #654189;
+}
+
+/* Hover effect for 'Back to Login' button */
+button.btn-secondary:hover {
+    background-color: #5a32a3; /* Darker purple on hover */
+}
+
+/* Message Styling */
+.message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.message.success {   
+    color: #28be4b;
+}
+
+.message.error {    
+    color: #c21829;
+}
+
+/* Forgot and Reset Links */
+.forgot-container .message,
+.reset-container .message {
+    margin-bottom: 20px;
+}
+
+.forgot-container a,
+.reset-container a {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-container a:hover,
+.reset-container a:hover {
+    text-decoration: underline;
+}
+
+/* Error Styling for Inputs */
+input[type="email"]:invalid,
+input[type="text"]:invalid,
+input[type="password"]:invalid {
+    border-color: #e74c3c;
+}
+
+input[type="email"]:valid,
+input[type="text"]:valid,
+input[type="password"]:valid {
+    border-color: #2ecc71;
+}
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    .forgot-container, .reset-container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="email"],
+    input[type="text"],
+    input[type="password"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/* General reset and body styling */
+.dashboard-page body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box; /* Ensure proper sizing */
+}
+
+/* Dashboard-specific styling */
+.dashboard-page {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px; /* Added padding for mobile devices */
+}
+
+/* Header styling */
+.dashboard-page header {
+    text-align: center;
+    background-color: #654189;
+    color: #f7f6f6;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* Ensure white font color for h1 and h2 */
+.dashboard-page h1, .dashboard-page h2 {
+    color: white;
+}
+
+/* Button container styling */
+.dashboard-page .button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Add space between buttons */
+    width: 100%; /* Full width */
+}
+
+/* Button styling */
+.dashboard-page button {
+    background-color: #40096c;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Make buttons full width */
+    max-width: 300px; /* Restrict width */
+    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Add horizontal margin for spacing */
+}
+
+/* Button hover and active states */
+.dashboard-page button:hover,
+.dashboard-page button:active {
+    background-color: #8e69c1;
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 600px) {
+    .dashboard-page {
+        padding: 10px; /* Reduced padding on smaller screens */
+    }
+
+    .dashboard-page button {
+        font-size: 16px; /* Adjust button font size */
+        padding: 12px 20px; /* Adjust padding for smaller buttons */
+        max-width: 90%; /* Allow buttons to take more width */
+    }
+
+    .dashboard-page h1, .dashboard-page h2 {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    .dashboard-page header {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+}
+
+
+/* General Weather Page Styling */
+body.weather-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    background-color: #f4f4f9;
+}
+
+/* Sidebar Styling */
+.sidebar.weather-page {
+    width: 150px; /* Increase width for better spacing */
+    min-height: 100vh;
+    background-color: #462c50;
+    color: #ffffff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.sidebar.weather-page h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+}
+
+.sidebar.weather-page ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar.weather-page ul li {
+    margin: 15px 0;
+}
+
+.sidebar.weather-page ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar.weather-page ul li a:hover {
+    background-color: #4c2867;
+}
+
+/* Content Styling */
+.content.weather-page {
+    margin-left: 220px;
+    padding: 20px;
+    width: calc(100% - 220px);
+}
+
+h1.weather-page {
+    color: white;
+}
+
+form.weather-page {
+    margin-bottom: 20px;
+}
+
+input.weather-page, button.weather-page {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+}
+
+button.weather-page {
+    background-color: #40096c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button.weather-page:hover {
+    background-color: #8e69c1;
+}
+
+/* Table Styling */
+table.weather-page {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+table.weather-page th, table.weather-page td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+table.weather-page th {
+    background-color: #8e69c1;
+    color: white;
+}
+
+table.weather-page tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table.weather-page tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* General body styling */
+.news-page-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Sidebar styling */
+.news-page .sidebar {
+    width: 150px; /* Increase width for better spacing */
+    min-height: 100vh;
+    background-color: #462c50;
+    color: #ffffff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-page .sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.news-page .sidebar ul li {
+    margin: 15px 0;
+}
+
+.news-page .sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.news-page .sidebar ul li a:hover {
+    color: #4c2867;
+}
+
+/* Main content styling */
+.news-page .main-content {
+    margin-left: 220px;
+    padding: 20px;
+    width: calc(100% - 220px);
+}
+
+.news-page h1 {
+    color: #331465;
+}
+
+.news-page .search-bar {
+    margin-bottom: 20px;
+}
+
+.news-page .search-bar input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.news-page .search-bar button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #40096c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px; /* Adjust the value as needed for the gap */
+}
+
+.news-page .search-bar button:hover {
+    background-color: #654189;
+}
+
+/* News container styling */
+.news-page #news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-page .news-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+.news-page .news-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.news-page .news-details {
+    padding: 15px;
+}
+
+.news-page .news-details h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.news-page .news-details h2 a {
+    text-decoration: none;
+    color: #1e293b;
+    transition: color 0.3s;
+}
+
+.news-page .news-details h2 a:hover {
+    color: #38bdf8;
+}
+
+.news-page .news-details p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.news-page .news-meta {
+    font-size: 12px;
+    color: #555;
+}
+
+
+/* General body styling for Calorie page */
+body.calorie-page {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex; /* Use flexbox for the layout */
+    flex-direction: row; /* Align items horizontally */
+    min-height: 100vh;
+}
+
+/* Sidebar styling */
+.calorie-page .sidebar {
+    width: 150px; /* Increase width for better spacing */
+    min-height: 100vh;
+    background-color: #462c50;
+    color: #ffffff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar links styling */
+.calorie-page .sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.calorie-page .sidebar ul li {
+    margin: 15px 0;
+}
+
+.calorie-page .sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.calorie-page .sidebar ul li a:hover {
+    color: #4c2867;
+}
+
+/* Main content styling */
+.calorie-page .container {
+    margin-left: 200px; /* Adjust the left margin to match the sidebar width */
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Ensure the content takes up the remaining space */
+}
+
+/* Heading styling */
+.calorie-page h1 {
+    margin-bottom: 20px;
+    color: #4a0f7b;
+}
+
+/* Form styling */
+.calorie-page form {
+    margin-top: 10px;
+}
+
+.calorie-page .form-label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.calorie-page .form-control {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    margin-top: 10px;  /* Gap above the input field */
+    margin-bottom: 10px; /* Gap below the input field */
+}
+
+.calorie-page .btn-primary {
+    background-color: #40096c;
+    border-color: #40096c;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 10px;  /* Gap above the button */
+    margin-bottom: 10px; /* Gap below the button */
+}
+
+.calorie-page .btn-primary:hover {
+    background-color: #654189;
+    border-color: #654189;
+}
+
+/* Results section styling */
+.calorie-page #results {
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    color: black;
+}
+
